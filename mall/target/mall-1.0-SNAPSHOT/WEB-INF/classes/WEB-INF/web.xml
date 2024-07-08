@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <welcome-file-list>
+   <welcome-file>main.html</welcome-file>
+  </welcome-file-list>
+
+    <!-- 加载静态css、js、images等文件，防止启动Tomcat访问jsp没有样式 -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/assets/*"</url-pattern>
+        <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
